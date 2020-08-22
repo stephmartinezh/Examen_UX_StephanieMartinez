@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  Position: absolute;
+  width: 1440px;
+  height: 1024px;
+  left: 0px;
+  top: 0px;
+  
+  background: rgba(252, 255, 129, 0.78);
 }
 
 .App-logo {
@@ -13,15 +20,43 @@
   }
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Paprika");
+@font-face{
+  font-family: "Paprika";
+  src: url("https://fonts.googleapis.com/css2?family=Paprika");
+}
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /*Titulo de la página*/
+  position: absolute;
+  left: -8.68%;
+  right: 62.36%;
+  top: 2.25%;
+  bottom: 86.62%;
+  font-family: Paprika;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  text-align: center;
+
+  color: #000000;
+
+}
+.App-slogan {
+  font-family: Paprika;
+  position: absolute;
+  left: -2.99%;
+  right: 68.68%;
+  top: 7.81%;
+  bottom: 85.06%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+
+  color: #000000;
 }
 
 .App-link {
@@ -35,4 +70,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-rectanguloEtiquetas{
+  position: absolute;
+  left: 2.5%;
+  right: 70.07%;
+  top: 12.99%;
+  bottom: 28.52%;
+  
+  background: #FDF7F7;
+  border: 1px solid #000000;
+  box-sizing: border-box;
 }
