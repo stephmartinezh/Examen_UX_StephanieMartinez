@@ -1,8 +1,8 @@
 .App {
   text-align: center;
   Position: absolute;
-  width: 1440px;
-  height: 1024px;
+  width: 100%;
+  height: 100%;
   left: 0px;
   top: 0px;
   
@@ -28,33 +28,32 @@
 
 .App-header {
   /*Titulo de la página*/
-  position: absolute;
-  left: -8.68%;
-  right: 62.36%;
-  top: 2.25%;
-  bottom: 86.62%;
+  left: 32.65%;
+  right: 32.55%;
+  top: 0%;
+  bottom: 94.02%;
+
   font-family: Paprika;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
-  line-height: 51px;
-  text-align: center;
+  line-height: 45px;
 
   color: #000000;
 
 }
 .App-slogan {
   font-family: Paprika;
-  position: absolute;
-  left: -2.99%;
-  right: 68.68%;
-  top: 7.81%;
-  bottom: 85.06%;
+  left: 38.91%;
+  right: 38.91%;
+  top: 5.98%;
+  bottom: 91.16%;
+
+  font-family: Paprika;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 17px;
-  text-align: center;
+  line-height: 0px;
 
   color: #000000;
 }
@@ -72,14 +71,67 @@
   }
 }
 
-.App-rectanguloEtiquetas{
+.App-rectanguloMostrar{
   position: absolute;
-  left: 2.5%;
-  right: 70.07%;
-  top: 12.99%;
-  bottom: 28.52%;
+  left: 6.35%;
+  right: 66.28%;
+  top: 15.86%;
+  bottom: 12.64%;
   
   background: #FDF7F7;
   border: 1px solid #000000;
   box-sizing: border-box;
+}
+
+.App-rectanguloEtiqueta{
+  font-family: Paprika;
+  position: absolute;
+  left: 41.64%;
+  right: 9.09%;
+  top: 15.86%;
+  bottom: 68.79%;
+
+  background: #FFFDFD;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.App-rectanguloEscribir{
+  position: absolute;
+  left: 41.64%;
+  right: 9.09%;
+  top: 31.21%;
+  bottom: 12.61%;
+
+  background: #FFFDFD;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.App-botonGuardar{
+  font-family: Paprika;
+  position: absolute;
+  left: 62.76%;
+  right: 28%;
+  top: 89.86%;
+  bottom: 4.44%;
+
+  background: rgba(252, 255, 129, 0.78); 
+}
+
+.App-fecha{
+  position: absolute;
+  left: 42.03%;
+  right: 44.57%;
+  top: 24.58%;
+  bottom: 71.39%;
+
+  font-family: Paprika;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+
+  color: #000000;
 }
