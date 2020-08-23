@@ -18,7 +18,10 @@ function App() {
       </div>
 
       <div className="App-rectanguloMostrar">
-        <p>Aquí irían los apuntes guardados</p>
+      <FormGroup>
+        <Label for="tStorage" fecha></Label>
+          <Input type="textarea" name="text" id="tStorage" onClick={storage()}/>
+      </FormGroup>        
       </div>
 
     <div className="App-rectanguloEtiqueta">
@@ -80,7 +83,7 @@ function registrarApunte (){
    
   var objFecha = new Date();
   var dia  = objFecha.getDate();
-  var mes  = objFecha.getMonth();
+  var mes  = 1+objFecha.getMonth();
   var anio = objFecha.getFullYear();
   var fechaT =  dia+'/'+mes+'/'+anio;
   /*var nEtiqueta = document.getElementById('tEtiqueta').value,
@@ -91,6 +94,15 @@ function registrarApunte (){
   //localStorage.setItem('etiqueta', JSON.stringify(aEtiqueta));
   localStorage.setItem('fecha', JSON.stringify(aFecha));
   //localStorage.setItem('apunte', JSON.stringify(aApunte));
+}
+
+function storage(){
+  var fecha = localStorage.getItem(fecha);
+  if(fecha != null){
+    return fecha;
+  }else{
+    //alert(fecha);
+  }
 }
 
 
