@@ -60,16 +60,6 @@ function App() {
 }
 
 
-/*function fecha(){
-  var objFecha = new Date();
-  var dia  = objFecha.getDate();
-  var mes  = objFecha.getMonth();
-  var anio = objFecha.getFullYear();
-  //var fechaT =  dia+'/'+mes+'/'+anio;
-  //fechaT = document.getElementById('resultado');
-  return dia+'/'+mes+'/'+anio;
-  
-};*/ 
 
 var aEtiqueta = [],
     aFecha = [],
@@ -79,11 +69,15 @@ var aEtiqueta = [],
 elementoBotonRegistrar = document.querySelector('#btnGuardar');
 elementoBotonRegistrar.addEventListener('click', registrarApunte());*/
 
-
+/*function metodoParaQueElBotonSirva(){
+  alert('Entro!');
+   var elementoBotonRegistrar;
+   elementoBotonRegistrar = document.getElementById('btnGuardar');
+   elementoBotonRegistrar.addEventListener('click', registrarApunte());
+}*/
 
 function registrarApunte (){
-   alert('Entro!');
-  
+   
   var objFecha = new Date();
   var dia  = objFecha.getDate();
   var mes  = objFecha.getMonth();
@@ -97,7 +91,6 @@ function registrarApunte (){
   //localStorage.setItem('etiqueta', JSON.stringify(aEtiqueta));
   localStorage.setItem('fecha', JSON.stringify(aFecha));
   //localStorage.setItem('apunte', JSON.stringify(aApunte));
-  //<h1>POr lo menos el botón asqueroso sirve</h1>*/
 }
 
 

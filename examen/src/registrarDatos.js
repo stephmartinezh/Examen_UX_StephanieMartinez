@@ -10,7 +10,7 @@ var elementoBotonRegistrar = document.querySelector('btnGuardar');
 elementoBotonRegistrar.addEventListener('click', registrarApunte);
 
 function registrarApunte(){
-    var objFecha = new Date();
+    /*var objFecha = new Date();
     var dia  = objFecha.getDate();
     var mes  = objFecha.getMonth();
     var anio = objFecha.getFullYear();
@@ -24,5 +24,5 @@ function registrarApunte(){
     localStorage.setItem('etiqueta', JSON.stringify(aEtiqueta));
     localStorage.setItem('fecha', JSON.stringify(aFecha));
     localStorage.setItem('apunte', JSON.stringify(aApunte));
-    <h1>POr lo menos el botón asqueroso sirve</h1>
+    <h1>POr lo menos el botón asqueroso sirve</h1>*/
 }
