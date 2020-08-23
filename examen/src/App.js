@@ -6,6 +6,7 @@ import { InputGroup, InputGroupAddon, InputGroupText, Input, FormGroup, Button, 
 
 function App() {
   //var fechaLocal = fecha();
+  var cont = 0;
   return (
     <div className="App">
       <header className="App-header" >
@@ -78,21 +79,24 @@ var aEtiqueta = [],
 elementoBotonRegistrar = document.querySelector('#btnGuardar');
 elementoBotonRegistrar.addEventListener('click', registrarApunte());*/
 
-function registrarApunte(){
-  alert('Entro!');
-  /*var objFecha = new Date();
+
+
+function registrarApunte (){
+   alert('Entro!');
+  
+  var objFecha = new Date();
   var dia  = objFecha.getDate();
   var mes  = objFecha.getMonth();
   var anio = objFecha.getFullYear();
   var fechaT =  dia+'/'+mes+'/'+anio;
-  var nEtiqueta = document.getElementById('tEtiqueta').value,
+  /*var nEtiqueta = document.getElementById('tEtiqueta').value,
       nApunte = document.getElementById('tApunte').value;
-  aEtiqueta.push(nEtiqueta);
+  aEtiqueta.push(nEtiqueta);*/
   aFecha.push(fechaT);
-  aApunte.push(nApunte);
-  localStorage.setItem('etiqueta', JSON.stringify(aEtiqueta));
+  //aApunte.push(nApunte);
+  //localStorage.setItem('etiqueta', JSON.stringify(aEtiqueta));
   localStorage.setItem('fecha', JSON.stringify(aFecha));
-  localStorage.setItem('apunte', JSON.stringify(aApunte));
+  //localStorage.setItem('apunte', JSON.stringify(aApunte));
   //<h1>POr lo menos el botón asqueroso sirve</h1>*/
 }
 
