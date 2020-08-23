@@ -50,13 +50,14 @@ function App() {
       <div id="resultado"></div>
     </div>
 
-    <div className="App-botonGuardar">
-      <Button color="primary" id="btnGuardar" >Guardar</Button>
-    </div>
+    <p className="App-botonGuardar">
+      <Button color="primary" id="btnGuardar" onClick={registrarApunte()} >Guardar</Button>
+    </p>
   </div>
     
   );
 }
+
 
 /*function fecha(){
   var objFecha = new Date();
@@ -67,34 +68,32 @@ function App() {
   //fechaT = document.getElementById('resultado');
   return dia+'/'+mes+'/'+anio;
   
-};*/
-
+};*/ 
 
 var aEtiqueta = [],
     aFecha = [],
     aApunte = [];
 
 /*var elementoBotonRegistrar;
-elementoBotonRegistrar = document.getElementById("btnGuardar");
+elementoBotonRegistrar = document.querySelector('#btnGuardar');
 elementoBotonRegistrar.addEventListener('click', registrarApunte());*/
 
 function registrarApunte(){
-  alert("Entro!");
-  var objFecha = new Date();
+  alert('Entro!');
+  /*var objFecha = new Date();
   var dia  = objFecha.getDate();
   var mes  = objFecha.getMonth();
   var anio = objFecha.getFullYear();
   var fechaT =  dia+'/'+mes+'/'+anio;
-  var nEtiqueta = document.querySelector('tEtiqueta').nodeValue,
-      nApunte = document.querySelector('tApunte').nodeValue;
-  aEtiqueta.push("Si");
-  aFecha.push("Entra");
-  aApunte.push("WOHO");
-  localStorage.setItem('myCat', 'Tom');
+  var nEtiqueta = document.getElementById('tEtiqueta').value,
+      nApunte = document.getElementById('tApunte').value;
+  aEtiqueta.push(nEtiqueta);
+  aFecha.push(fechaT);
+  aApunte.push(nApunte);
   localStorage.setItem('etiqueta', JSON.stringify(aEtiqueta));
   localStorage.setItem('fecha', JSON.stringify(aFecha));
   localStorage.setItem('apunte', JSON.stringify(aApunte));
-  //<h1>POr lo menos el botón asqueroso sirve</h1>
+  //<h1>POr lo menos el botón asqueroso sirve</h1>*/
 }
 
 
