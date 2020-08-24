@@ -74,13 +74,94 @@
 .App-rectanguloMostrar{
   position: absolute;
   left: 6.35%;
-  right: 66.28%;
+  right: 61.09%;
   top: 15.86%;
-  bottom: 12.64%;
+  bottom: 12.61%;
   
   background: #FDF7F7;
   border: 1px solid #000000;
   box-sizing: border-box;
+}
+
+.App-rectanguloFecha{
+  position: absolute;
+  left: 0%;
+  right: 70.9%;
+  top: 0%;
+  bottom: 89.00%;
+  
+  background: rgba(255, 255, 255, 0.25);
+  box-sizing: border-box;
+  font-family: Paprika;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.App-rectanguloFechaEscribir{
+  position: absolute;
+  left: 6.35%;
+  right: 86.9%;
+  top: 22.37%;
+  bottom: 12.61%;
+
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-family: Paprika;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.App-rectanguloEtiqueta2{
+  position: absolute;
+  left: 35%;
+  right: 75.9%;
+  top: 0%;
+  bottom: 89.00%;
+
+background: rgba(255, 255, 255, 0.25);
+  box-sizing: border-box;
+  font-family: Paprika;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.App-rectanguloApunte{
+  position: absolute;
+  left: 70.65%;
+  right: 32.55%;
+  top: 0%;
+  bottom: 89.00%;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-sizing: border-box;
+  font-family: Paprika;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.App-rectanguloTabla{
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 10.90%;
+  bottom: 0%;
+
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-family: Paprika;
+  font-size: 7.5px;
 }
 
 .App-rectanguloEtiqueta{

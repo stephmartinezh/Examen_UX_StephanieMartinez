@@ -15,15 +15,18 @@ function App() {
       </div>
 
       <div className="App-rectanguloMostrar">
-        <Table id="tabla">
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Etiqueta</th>
-            <th>Apunte</th>
-          </tr>
-        </thead>
-        </Table>       
+        <div className="App-rectanguloFecha">
+            <p>Fecha</p>
+        </div>
+        <div className="App-rectanguloEtiqueta2">
+            <p>Etiqueta</p>
+        </div>
+        <div className="App-rectanguloApunte">
+            <p>Apunte</p>
+        </div> 
+        <div className="App-rectanguloTabla">
+            <Table striped id="tabla"></Table>  
+        </div>
       </div>
 
     <div className="App-rectanguloEtiqueta">
@@ -69,8 +72,28 @@ function App() {
 var aEtiqueta = [],
     aFecha = [],
     aApunte = [];
+//var condicionFuncion = true;
+aEtiqueta.push(localStorage.getItem('Etiqueta'));
+aFecha.push(localStorage.getItem('Fecha'));
+aApunte.push(localStorage.getItem('Apunte'));
 
-//var arregloGuardado = [];
+/*function cargarElementos(){
+    if(localStorage.length >= 1){
+        if(condicionFuncion){
+
+            aEtiqueta.push(localStorage.getItem('Etiqueta'));
+            aFecha.push(localStorage.getItem('Fecha'));
+            aApunte.push(localStorage.getItem('Apunte'));
+            storage();
+            condicionFuncion = false;
+        }else{
+            registrarApunte();
+        }
+    }else{
+        registrarApunte();
+    }
+
+}*/
 
 function registrarApunte (){
     /*localStorage.removeItem('Fecha');
@@ -94,9 +117,10 @@ function registrarApunte (){
             localStorage.setItem('Etiqueta', JSON.stringify(aEtiqueta));
             localStorage.setItem('Fecha', JSON.stringify(aFecha));
             localStorage.setItem('Apunte', JSON.stringify(aApunte));
+            
             storage();
         }else{
-            alert("Ingrese un apunte con otra etiqueta");
+            alert("Ingrese otro apunte con una nueva etiqueta");
         }
     }else if(aEtiqueta.length<=0){
         aEtiqueta.push(nEtiqueta);
@@ -114,8 +138,10 @@ function registrarApunte (){
 }
 
 function storage(){
-    var elementos = "<tr><td>"+aEtiqueta+"</td><td>"+aFecha+"</td><td>"+aApunte+"</td></tr>";
-    document.getElementById('tabla').innerHTML=elementos;
+    for(var i=1; i<aEtiqueta.length;i++){
+        var elementos = "<td>"+aEtiqueta[i]+"</td><td>"+aFecha[i]+"</td><td>"+aApunte[i]+"</td>";
+        document.getElementById('tabla').innerHTML=elementos;
+    }
   }
 
 export default App;
