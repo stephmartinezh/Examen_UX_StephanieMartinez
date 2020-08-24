@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import { InputGroup, InputGroupAddon, InputGroupText, Input, FormGroup, Button, Label, Table } from 'reactstrap';
 
-function clicked() {
-    console.log("le dieron click");
-}
 
 function App() {
-  //var fechaLocal = fecha();
-  var cont = 0;
   return (
     <div className="App">
       <header className="App-header" >
@@ -20,7 +15,7 @@ function App() {
       </div>
 
       <div className="App-rectanguloMostrar">
-        <Table>
+        <Table id="tabla">
         <thead>
           <tr>
             <th>Fecha</th>
@@ -75,7 +70,7 @@ var aEtiqueta = [],
     aFecha = [],
     aApunte = [];
 
-var arregloGuardado = [];
+//var arregloGuardado = [];
 
 function registrarApunte (){
     /*localStorage.removeItem('Fecha');
@@ -84,21 +79,23 @@ function registrarApunte (){
     var nEtiqueta = document.getElementById('tEtiqueta').value,
         nFecha = document.getElementById('tFecha').value,
         nApunte = document.getElementById('tApunte').value;
-    aEtiqueta.push(nEtiqueta);
-    aFecha.push(nFecha);
-    aApunte.push(nApunte);
-    localStorage.setItem('Etiqueta', JSON.stringify(aEtiqueta));
-    localStorage.setItem('Fecha', JSON.stringify(aFecha));
-    localStorage.setItem('Apunte', JSON.stringify(aApunte));
+    if(nEtiqueta !== "" && nFecha !== "" && nApunte !== ""){
+        aEtiqueta.push(nEtiqueta);
+        aFecha.push(nFecha);
+        aApunte.push(nApunte);
+        localStorage.setItem('Etiqueta', JSON.stringify(aEtiqueta));
+        localStorage.setItem('Fecha', JSON.stringify(aFecha));
+        localStorage.setItem('Apunte', JSON.stringify(aApunte));
+        storage();
+    }else{
+        alert("Por favor llene todos los campos del apunte antes de guardar");
+    }
+    
 }
 
 function storage(){
-  var fecha = localStorage.getItem(fecha);
-  if(fecha != null){
-    return fecha;
-  }else{
-    //alert(fecha);
+    var elementos = "<tr><td>"+aEtiqueta+"</td><td>"+aFecha+"</td><td>"+aApunte+"</td></tr>";
+    document.getElementById('tabla').innerHTML=elementos;
   }
-}
 
 export default App;
