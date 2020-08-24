@@ -72,15 +72,11 @@ function App() {
 var aEtiqueta = [],
     aFecha = [],
     aApunte = [];
-//var condicionFuncion = true;
 aEtiqueta.push(localStorage.getItem('Etiqueta'));
 aFecha.push(localStorage.getItem('Fecha'));
 aApunte.push(localStorage.getItem('Apunte'));
 
 function registrarApunte (){
-    /*localStorage.removeItem('Fecha');
-    localStorage.removeItem('Etiqueta');
-    localStorage.removeItem('Apunte');*/
     var nEtiqueta = document.getElementById('tEtiqueta').value,
         nFecha = document.getElementById('tFecha').value,
         nApunte = document.getElementById('tApunte').value;
