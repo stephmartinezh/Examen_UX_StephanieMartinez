@@ -77,24 +77,6 @@ aEtiqueta.push(localStorage.getItem('Etiqueta'));
 aFecha.push(localStorage.getItem('Fecha'));
 aApunte.push(localStorage.getItem('Apunte'));
 
-/*function cargarElementos(){
-    if(localStorage.length >= 1){
-        if(condicionFuncion){
-
-            aEtiqueta.push(localStorage.getItem('Etiqueta'));
-            aFecha.push(localStorage.getItem('Fecha'));
-            aApunte.push(localStorage.getItem('Apunte'));
-            storage();
-            condicionFuncion = false;
-        }else{
-            registrarApunte();
-        }
-    }else{
-        registrarApunte();
-    }
-
-}*/
-
 function registrarApunte (){
     /*localStorage.removeItem('Fecha');
     localStorage.removeItem('Etiqueta');
@@ -117,7 +99,6 @@ function registrarApunte (){
             localStorage.setItem('Etiqueta', JSON.stringify(aEtiqueta));
             localStorage.setItem('Fecha', JSON.stringify(aFecha));
             localStorage.setItem('Apunte', JSON.stringify(aApunte));
-            
             storage();
         }else{
             alert("Ingrese otro apunte con una nueva etiqueta");
@@ -138,8 +119,10 @@ function registrarApunte (){
 }
 
 function storage(){
-    for(var i=1; i<aEtiqueta.length;i++){
-        var elementos = "<td>"+aEtiqueta[i]+"</td><td>"+aFecha[i]+"</td><td>"+aApunte[i]+"</td>";
+    
+    for(var i=0; i< aEtiqueta.length; i++){
+        alert(aEtiqueta[i]);
+        var elementos = "<tr><td>"+aFecha[i]+"</td><td>"+aEtiqueta[i]+"</td><td>"+aApunte[i]+"</td></tr>";
         document.getElementById('tabla').innerHTML=elementos;
     }
   }
