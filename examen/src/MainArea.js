@@ -79,7 +79,26 @@ function registrarApunte (){
     var nEtiqueta = document.getElementById('tEtiqueta').value,
         nFecha = document.getElementById('tFecha').value,
         nApunte = document.getElementById('tApunte').value;
-    if(nEtiqueta !== "" && nFecha !== "" && nApunte !== ""){
+    if(nEtiqueta !== "" && nFecha !== "" && nApunte !== "" && aEtiqueta.length >= 1){
+        var condicion = true;
+        for(var i=0; i<=aEtiqueta.length; i++){
+            if(aEtiqueta[i] === nEtiqueta){
+                condicion = false;
+                break;
+            }
+        }
+        if(condicion){
+            aEtiqueta.push(nEtiqueta);
+            aFecha.push(nFecha);
+            aApunte.push(nApunte);
+            localStorage.setItem('Etiqueta', JSON.stringify(aEtiqueta));
+            localStorage.setItem('Fecha', JSON.stringify(aFecha));
+            localStorage.setItem('Apunte', JSON.stringify(aApunte));
+            storage();
+        }else{
+            alert("Ingrese un apunte con otra etiqueta");
+        }
+    }else if(aEtiqueta.length<=0){
         aEtiqueta.push(nEtiqueta);
         aFecha.push(nFecha);
         aApunte.push(nApunte);
@@ -89,6 +108,7 @@ function registrarApunte (){
         storage();
     }else{
         alert("Por favor llene todos los campos del apunte antes de guardar");
+
     }
     
 }
